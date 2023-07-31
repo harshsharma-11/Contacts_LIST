@@ -1,0 +1,65 @@
+<html>
+    <head>
+      <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+        <link rel="stylesheet" href="./css/home.css">
+<title>
+    <%= locals.title %>
+</title>
+    </head>
+ <body>
+
+    <h1 id="hello"><i class="fa-solid fa-address-book"></i> My Contact Lists</h1>
+ <ul>
+  <%for(let i of contact_list){%>
+    <li id="hi">
+      <div id="row"> 
+        <div id="name_num">
+       <div id="fir"><%=i.name%></div>
+                <div id="sec"><%=i.mobile%></div>
+        </div>
+             <div id="icon">   <a href="/delete-contact/?id=<%=i._id%>">
+                  <i class="fa-solid fa-user-minus"></i>
+                </a>
+              </div>
+      </div>
+      
+    </li>
+    
+ <% }%>
+</ul>
+<div id="form"><form action="/create_contact" method="POST">
+    <input required placeholder="Enter name" name="name" type="text">
+    
+    <input required placeholder="Enter mobile" name="mobile" type="number"  min="100000" max="99999999999">
+    <button type="submit">Add to contacts</button>
+
+</form>
+</div>
+
+<script type="text/javascript" src="/js/home.js"></script>
+<script>
+    // Get all li elements
+    var listItems = document.getElementsByTagName('li');
+
+    // Loop through all li elements and add event listeners
+    for (let i = 0; i < listItems.length; i++) {
+      // Add event listener for mouseenter (hover in)
+      var color;
+      listItems[i].addEventListener('mouseenter', function() {
+        color= this.style.backgroundColor;
+        this.style.backgroundColor = 'grey';
+      });
+
+      // Add event listener for mouseleave (hover out)
+      listItems[i].addEventListener('mouseleave', function() {
+        this.style.backgroundColor = color;
+      });
+    }
+  </script>
+
+</body>
+    </html>

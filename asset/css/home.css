@@ -1,0 +1,83 @@
+#hi{
+    text-align:center;
+    background-color: blueviolet;
+    list-style-type: none;
+    width:40vw;
+    height:7vh;
+    margin:2vh;
+    margin-left: auto;
+    color: aliceblue;
+    margin-right: auto;
+    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    
+}
+
+
+
+#name_num{
+    display:flex;
+    width:85%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:100%;
+}
+#icon{
+    width:10%;
+}
+#icon i{
+    margin: 1vh;
+}
+#row{
+    display:flex;
+    width:100%;
+justify-content: space-evenly;
+height:8vh;
+font-size: 3.3vh;
+}
+
+
+
+#fir{
+    width: auto;
+    display: flex;
+    align-self: center;
+    height: 50%;
+
+}
+#sec{
+    width: auto;
+    display: flex;
+    align-self: center;
+    height: 50%;
+
+}
+
+/*
+#hi div{
+    position:relative;
+    
+    display: flex;
+    height:inherit;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}*/
+body{
+    text-align:center;
+}
+#hello{
+    font-family: sans-serif;
+    color: grey;
+    font-size:10vh;
+    margin:-1vh;
+}
+input{border: none;
+    border-bottom: 0.3vh solid rgb(78, 78, 78);
+}
+button{
+    background-color: rgb(196, 143, 229);
+}
+#form{
+    margin-top: 5vh;
+}
